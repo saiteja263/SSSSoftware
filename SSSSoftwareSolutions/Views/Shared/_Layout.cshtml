@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="~/SSSSoftwareSolutions.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+ 
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-brand bg-secondary border-bottom box-shadow mb-2">
             <div class="container-fluid">
                 @* <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SSSSoftwareSolutions</a> *@
                 <a class="navbar-brand" href="/">
-                    <img src="~/css/Logo.png" alt="Company Logo" height="80"> SSSSoftwareSolutions
+                    <img src="~/css/Logo.png" alt="Company Logo" height="80" style="font-size:50px;font:100"> SSSSoftwareSolutions
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,22 +25,47 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" style="font-size:20px; font:bold" asp-action="Index" >Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="WhoWeAre">Who We Are</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" style="font-size:20px; font:bold" asp-action="WhoWeAre">Who We Are</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="OurServices">Our Services</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" style="font-size:20px; font:bold"  asp-action="OurServices">Our Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" style="font-size:20px; font:bold" asp-action="Contact">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    @* <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+        <button class="tablinks" onclick="openTab(event, 'Services')">Services</button>
+        <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+        <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+    </div>
+    <div id="Home" class="tabcontent">
+        <h3>Home</h3>
+        <p>Welcome to our homepage.</p>
+    </div>
+
+    <div id="Services" class="tabcontent">
+        <h3>Services</h3>
+        <p>Details about our services.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>Information about us.</p>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>Contact details here.</p>
+    </div> *@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -54,6 +80,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
